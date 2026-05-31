@@ -1,0 +1,20 @@
+math-symbols.tex
+	数学符号与环境宏包。
+
+physics-symbols.tex
+	包含物理、化学等自然科学符号的宏包。
+
+figure-packages.tex
+	外部图片文件的宏包。
+
+typeset-packages.tex
+	排班设置宏包。
+
+sketching-packages.tex
+	自主绘图宏包。
+
+highlighting-packages.tex
+	引用、颜色与高亮宏包
+
+language-supporting.tex
+	语言支持（目前仅有中文支持）

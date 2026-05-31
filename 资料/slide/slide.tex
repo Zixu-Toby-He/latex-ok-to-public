@@ -1,0 +1,157 @@
+% !Mode:: "TeX:UTF-8"
+\documentclass[12pt,UTF8]{beamer}
+\usepackage{ctex}
+%\mode<presentation>
+
+\usepackage{graphicx}
+\usepackage{comment}
+\usetheme{Antibes}
+%\usefonttheme[onlymath]{serif}
+\usepackage{amsmath}
+
+\title{\LaTeX 排版基础与幻灯片的制作}
+\author{杨璟昊}
+\date{2020年3月18日}
+\institute[]{2018级致远物理方向}
+\begin{document}
+	\AtBeginSection[]{
+		\begin{frame}
+			\tableofcontents[currentsection]
+		\end{frame}
+	}
+
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\tableofcontents
+	\end{frame}
+
+\section{\LaTeX 简介}
+	\begin{frame}{\LaTeX 是什么}
+	
+		\begin{itemize}
+			\item \TeX 与 \LaTeX
+				\begin{itemize}
+					\item \TeX 是由 Donald E. Knuth与1977年五月开始设计的一种开源排版语言
+					\item \LaTeX 由Leslie Lamport在20世纪80年代初开发
+					\item 近似可理解为\TeX 是汇编语言而\LaTeX 是高级语言
+				\end{itemize}
+			 
+			\item 一种用作排版的标记语言
+				\begin{itemize}
+					\item 对比HTML、Word、Markdown、PDF
+				\end{itemize}
+			\item 目前CTAN（Comprehensive TeX Archive Network）是世界上最主要的\LaTeX 资源集散站，存有各种宏包
+		\end{itemize}
+	
+	\end{frame}
+	
+	\begin{frame}{为什么使用\LaTeX}
+		\begin{itemize}
+			\item 学术排版的统一标准，有“内味”
+			\item 强大的数学公式排版功能
+			\item 强大的引用与交叉引用、自动目录生成
+			\item 可对文档进行精细调整
+			\item 使作者不需要过多的关心排版工作、专注于文档内容的编写
+			\item 完全开源
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{\LaTeX 工作流程}
+	\begin{itemize}
+		\item 安装\LaTeX 编译器，推荐使用Texlive2019
+		\item 编写文件，可使用任意一种文本编辑器，推荐使用Tex studio，专为\LaTeX 设计
+		\item 将文本文件编译成文档，通常编译成PDF格式
+		\item 如果不想在本地安装编译器，可使用在线编译器Overleaf 
+	\end{itemize}
+\end{frame}
+\section{\LaTeX 排版基础}
+	\begin{frame}{\LaTeX 文件结构}
+		\begin{itemize}
+			\item 头文件
+			\begin{itemize}
+				\item 文章类型
+				\item 外部宏包
+				\item 自定义内容
+				\item 某些设置
+			\end{itemize}
+			\item 文章主体
+			\begin{itemize}
+				\item 标题、目录、摘要
+				\item 多个section
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{\LaTeX 文件结构}		
+		\begin{itemize}
+			\item 引用
+			\begin{itemize}
+				\item 使用bibtex，需要连续两次编译
+				\item 自动生成引用编号与连接
+				\item 数据库网站会提供文章的bibtex格式引用
+			\end{itemize}
+			\item 多文件结构
+			\begin{itemize}
+				\item 可以先写一个main函数定义头文件，写多个文章主体文件
+				\item 方便文档较大时对文档的管理
+			\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}{\LaTeX 命令}
+		\begin{itemize}
+			\item section
+			\item 环境
+			\item 数学公式的写法
+			\item \{\} 与$\backslash$ 的使用
+		\end{itemize}
+	\end{frame}
+\section{\LaTeX 制作幻灯片——基于beamer}
+		\begin{frame}{幻灯片基本要素}
+			\begin{itemize}
+				\item 建立一页幻灯片
+				\item 内容强调
+				\item 简单动画
+			\end{itemize}
+		\end{frame}
+		\begin{frame}{示例}
+		\begin{block}{}
+			\begin{equation*}
+			\begin{aligned}
+			\mathcal{T} &=\frac{1}{2}(m_1\dot{x_1}^2+m_2\dot{x_2}^2) \\
+			\mathcal{V} &=\frac{1}{2}(k_1x_1^2+k_2(x_2-x_1)^2) \\
+			&=\frac{1}{2}(k_1+k_2)x_1^2-k_2x_1x_2+\frac{1}{2}k_2x_2^2
+			\end{aligned}
+			\end{equation*}
+		\end{block}
+		\pause
+		\begin{block}{General Solutions}
+			\begin{equation*}
+			\left|\begin{array}{cc} 
+			k_1+k_2-\omega^2\cdot m_1 &   -k_2    \\ 
+			-k_2 &  k_2-\omega^2\cdot m_2   
+			\end{array}\right| 
+			=0
+			\end{equation*}	
+		\end{block}
+		\end{frame}
+\section{总结}
+\begin{frame}{总结}
+	\begin{itemize}
+		\item 使用\LaTeX 可以使排版更美观，使作者更专注于文档内容本身
+		\item \LaTeX 的使用需要大量的练习才能熟练
+		\item \LaTeX 制作幻灯片适合在存在大量公式且对动画要求不高的情况下
+		\item \LaTeX 是开源软件，任何你能想到的文档的功能基本都能实现，不会就百度！
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\centering
+	\Large{\textbf{感谢聆听！}} 
+\end{frame}
+%========================================================================
+\end{document}
