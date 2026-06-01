@@ -25,7 +25,7 @@
 
 % 引入其他宏包
 
-\DeclareOption{defaultAuthor}{\author{贺子旭}} \ProcessOptions \relax
+\DeclareOption{defaultAuthor}{\author{Author}} \ProcessOptions \relax
 
 \LoadClass{article}
 \RequirePackage{}

@@ -1,0 +1,64 @@
+\documentclass{exam-zh}
+\usepackage{mhchem}     % 化学式支持
+\usepackage{siunitx}    % 物理单位支持
+
+% 设置试题标题等信息
+\title{模拟试卷}
+\author{Exam-zh 示例}
+\date{\today}
+
+% 定义判断题勾叉符号（可选）
+\newcommand{\correct}{\text{（正确）}}
+\newcommand{\incorrect}{\text{（错误）}}
+
+\begin{document}
+
+% 生成试卷标题
+\maketitle
+
+% 第一部分：选择题
+\section{选择题}
+
+	\begin{question}
+		$1+1$ 的值是多少？
+		\begin{choices}
+			\item 0
+			\item 1
+			\item 2
+			\item 11
+		\end{choices}
+	\end{question}
+
+	\begin{question}
+		下面哪个是按顺序排列的英语大写字母表？
+		\begin{choices}
+			\item abcdefghijklmnopqrstuvwxyz
+			\item ABCDEFGHIJKLMNOPQRSTUVWXYZ
+			\item QWERTYUIOPASDFGHJKLZXCVBNM
+			\item あいうえおかきくけこさしすせそたちつてと
+		\end{choices}
+	\end{question}
+
+% 第二部分：填空题
+\section{填空题}
+
+\begin{question}
+	配平下列化学方程式，并写出产物：\\
+	\ce{CaCO3 + \_HCl -> } \fillin   % 留出6cm的填空线
+	%\fillin[][6cm]   % 留出6cm的填空线
+\end{question}
+
+% 第三部分：判断题
+\section{判断题}
+	\begin{question}
+		两直线平行，同旁内角相等。\hfill （ \quad 正确\quad 错误\quad ）
+	\end{question}
+
+% 第四部分：简答题
+\section{简答题}
+	\begin{question}
+		一质点从原点静止出发，以加速度 $\SI{1}{\meter\per\square\second}$ 沿直线运动，求 $t = \SI{10}{\second}$ 时的位移大小。
+		\vspace{4cm}   % 留出答题空间
+	\end{question}
+
+\end{document}
